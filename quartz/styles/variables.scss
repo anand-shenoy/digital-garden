@@ -46,13 +46,15 @@ $tabletGrid: (
       "grid-sidebar-left grid-sidebar-right"\
       "grid-sidebar-left grid-footer"',
 );
+// Desktop is a full-width 8-column grid: sidebar-left spans columns 1-2,
+// centre content spans columns 3-6, sidebar-right (graph) spans columns 7-8
 $desktopGrid: (
   templateRows: "auto auto auto",
-  templateColumns: "#{$sidePanelWidth} auto #{$sidePanelWidth}",
-  rowGap: "5px",
-  columnGap: "5px",
+  templateColumns: "repeat(8, 1fr)",
+  rowGap: "0px",
+  columnGap: "0px",
   templateAreas:
-    '"grid-sidebar-left grid-header grid-sidebar-right"\
-      "grid-sidebar-left grid-center grid-sidebar-right"\
-      "grid-sidebar-left grid-footer grid-sidebar-right"',
+    '"grid-sidebar-left grid-sidebar-left grid-header grid-header grid-header grid-header grid-sidebar-right grid-sidebar-right"\
+      "grid-sidebar-left grid-sidebar-left grid-center grid-center grid-center grid-center grid-sidebar-right grid-sidebar-right"\
+      "grid-sidebar-left grid-sidebar-left grid-footer grid-footer grid-footer grid-footer grid-sidebar-right grid-sidebar-right"',
 );

@@ -9,9 +9,11 @@
   margin: 2rem 0;
 
   @media all and ($desktop) {
-    // extend past the centre column so slides can visually pass behind the
-    // sticky graph panel in the right sidebar, instead of stopping short of it
-    width: calc(100% + #{$sidePanelWidth} + 5px);
+    // centre spans 4 of 8 grid columns, sidebar-right spans 2 of 8, so the
+    // sidebar is exactly half the centre column's width. Extending by 50%
+    // lets slides visually pass behind the graph panel instead of stopping
+    // short of it, with zero column gap on this grid.
+    width: 150%;
   }
 
   & > .carousel-viewport {

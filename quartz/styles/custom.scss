@@ -1,4 +1,5 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
 // put your custom CSS here!
 
@@ -35,4 +36,22 @@
 .sidebar.right {
   position: sticky;
   z-index: 2;
+
+  // full-bleed: the blue/grey graph panel fills its two grid columns edge to
+  // edge with no top, bottom, or right margin
+  @media all and ($desktop) {
+    padding: 0;
+    gap: 0;
+    height: 100vh;
+  }
+}
+
+// readable horizontal gutter for the content column now that the page is
+// full-width (vertical spacing is already handled by .page-header's own
+// top margin, so only left/right padding is added here)
+@media all and ($desktop) {
+  .center {
+    padding: 0 3rem;
+    box-sizing: border-box;
+  }
 }

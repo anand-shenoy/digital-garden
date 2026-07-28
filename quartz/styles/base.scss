@@ -154,6 +154,12 @@ a {
 .page {
   max-width: calc(#{map.get($breakpoints, desktop)} + 300px);
   margin: 0 auto;
+
+  @media all and ($desktop) {
+    max-width: 100%;
+    margin: 0;
+  }
+
   & article {
     & > h1 {
       font-size: 2rem;
