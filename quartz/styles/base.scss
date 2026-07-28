@@ -239,6 +239,7 @@ a {
       flex-direction: column;
       @media all and ($desktop) {
         padding-left: 4.5rem;
+        gap: 0;
       }
       @media all and ($mobile) {
         gap: 0;

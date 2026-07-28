@@ -6,34 +6,36 @@
   flex: 1;
   min-height: 0;
 
-  // panel-local colour overrides, reversed relative to the site's current mode
-  // (day: blue panel + grey graph, night: grey panel + blue graph), read by
-  // graph.inline.ts via getComputedStyle() on the local container, so these
-  // only affect this panel and never the site-wide theme variables.
-  // Only #005CFF and #E6E6ED are used anywhere, alpha variants included.
-  --graph-bg: #005cff;
-  --graph-hover: rgba(230, 230, 237, 0.2);
-  --light: #e6e6ed;
-  --lightgray: rgba(230, 230, 237, 0.4);
-  --gray: #e6e6ed;
-  --darkgray: rgba(230, 230, 237, 0.7);
-  --dark: #e6e6ed;
-  --secondary: #e6e6ed;
-  --tertiary: rgba(230, 230, 237, 0.75);
-
-  [saved-theme="dark"] & {
-    --graph-bg: #e6e6ed;
-    --graph-hover: rgba(0, 92, 255, 0.15);
-    --light: #005cff;
-    --lightgray: rgba(0, 92, 255, 0.4);
-    --gray: #005cff;
-    --darkgray: rgba(0, 92, 255, 0.7);
-    --dark: #005cff;
-    --secondary: #005cff;
-    --tertiary: rgba(0, 92, 255, 0.75);
-  }
-
   & > .graph-outer {
+    // panel-local colour overrides, reversed relative to the site's current
+    // mode (day: blue panel + grey graph, night: grey panel + blue graph),
+    // read by graph.inline.ts via getComputedStyle() on the local container.
+    // Scoped to just this mini panel (not .global-graph-outer below) so the
+    // full-screen graph popup keeps using the normal site-wide theme colours,
+    // where its nodes actually contrast against its background.
+    // Only #005CFF and #E6E6ED are used anywhere, alpha variants included.
+    --graph-bg: #005cff;
+    --graph-hover: rgba(230, 230, 237, 0.2);
+    --light: #e6e6ed;
+    --lightgray: rgba(230, 230, 237, 0.4);
+    --gray: #e6e6ed;
+    --darkgray: rgba(230, 230, 237, 0.7);
+    --dark: #e6e6ed;
+    --secondary: #e6e6ed;
+    --tertiary: rgba(230, 230, 237, 0.75);
+
+    [saved-theme="dark"] & {
+      --graph-bg: #e6e6ed;
+      --graph-hover: rgba(0, 92, 255, 0.15);
+      --light: #005cff;
+      --lightgray: rgba(0, 92, 255, 0.4);
+      --gray: #005cff;
+      --darkgray: rgba(0, 92, 255, 0.7);
+      --dark: #005cff;
+      --secondary: #005cff;
+      --tertiary: rgba(0, 92, 255, 0.75);
+    }
+
     border-radius: 0;
     background-color: var(--graph-bg);
     box-sizing: border-box;
@@ -47,7 +49,7 @@
       font-size: 1rem;
       margin: 0;
       position: absolute;
-      top: 1.5rem;
+      top: $topSpacing;
       left: 1.5rem;
       z-index: 1;
       color: var(--light);
@@ -70,7 +72,7 @@
       position: absolute;
       padding: 0.2rem;
       margin: 0.3rem;
-      top: 0;
+      top: calc(#{$topSpacing} - 0.2rem);
       right: 0;
       border-radius: 4px;
       background-color: transparent;
