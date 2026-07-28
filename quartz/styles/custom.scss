@@ -11,14 +11,14 @@
   font-display: swap;
 }
 
-// Dark mode toggle moved to the top-right of the content column, per design mockup
-.center {
+// Dark mode toggle aligned to the top-right of the nav sidebar (columns 1-2)
+.sidebar.left {
   position: relative;
 }
 
-.center .darkmode {
+.sidebar.left .darkmode {
   position: absolute;
-  top: 0.5rem;
+  top: 0;
   right: 0;
   width: 28px;
   height: 28px;
@@ -29,6 +29,15 @@
     height: 28px;
     top: calc(50% - 14px);
   }
+}
+
+// extra breathing room between the title, search, and nav tree
+.sidebar.left > .flex-component {
+  margin-top: 80px;
+}
+
+.sidebar.left > .explorer {
+  margin-top: 80px;
 }
 
 // Right sidebar (graph panel) sits above the carousel so scrolling images
