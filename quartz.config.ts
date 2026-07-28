@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Anand's Digital Garden",
+    pageTitle: "Digital Garden",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -25,28 +25,31 @@ const config: QuartzConfig = {
         body: "Geist Mono",
         code: "Geist Mono",
       },
+      // Only two colours in the whole palette: #005CFF blue and #E6E6ED grey.
+      // Alpha variants of those same two hues are used for subtle borders/
+      // muted text, dark mode is a full reversal of light mode.
       colors: {
         lightMode: {
           light: "#E6E6ED",
-          lightgray: "#D6D6E0",
-          gray: "#A9ACC4",
-          darkgray: "#5C6690",
+          lightgray: "rgba(0, 92, 255, 0.25)",
+          gray: "rgba(0, 92, 255, 0.55)",
+          darkgray: "#005CFF",
           dark: "#005CFF",
-          secondary: "#24397A",
-          tertiary: "#8890B8",
+          secondary: "#005CFF",
+          tertiary: "rgba(0, 92, 255, 0.7)",
           highlight: "rgba(0, 92, 255, 0.15)",
           textHighlight: "rgba(0, 92, 255, 0.35)",
         },
         darkMode: {
           light: "#005CFF",
-          lightgray: "#4A63B8",
-          gray: "#7C93D0",
-          darkgray: "#C3CEEB",
-          dark: "#FFFFFF",
+          lightgray: "rgba(230, 230, 237, 0.25)",
+          gray: "rgba(230, 230, 237, 0.55)",
+          darkgray: "#E6E6ED",
+          dark: "#E6E6ED",
           secondary: "#E6E6ED",
-          tertiary: "#A9ACC4",
-          highlight: "rgba(255, 255, 255, 0.15)",
-          textHighlight: "rgba(255, 255, 255, 0.35)",
+          tertiary: "rgba(230, 230, 237, 0.7)",
+          highlight: "rgba(230, 230, 237, 0.15)",
+          textHighlight: "rgba(230, 230, 237, 0.35)",
         },
       },
     },

@@ -7,27 +7,30 @@
   min-height: 0;
 
   // panel-local colour overrides, reversed relative to the site's current mode
-  // (day: blue panel + white graph, night: grey panel + blue graph) — read by
+  // (day: blue panel + grey graph, night: grey panel + blue graph), read by
   // graph.inline.ts via getComputedStyle() on the local container, so these
-  // only affect this panel and never the site-wide theme variables
+  // only affect this panel and never the site-wide theme variables.
+  // Only #005CFF and #E6E6ED are used anywhere, alpha variants included.
   --graph-bg: #005cff;
-  --light: #ffffff;
-  --lightgray: #6e96ff;
-  --gray: #ffffff;
-  --darkgray: #b9d2ff;
-  --dark: #ffffff;
-  --secondary: #b9d2ff;
-  --tertiary: #e6eeff;
+  --graph-hover: rgba(230, 230, 237, 0.2);
+  --light: #e6e6ed;
+  --lightgray: rgba(230, 230, 237, 0.4);
+  --gray: #e6e6ed;
+  --darkgray: rgba(230, 230, 237, 0.7);
+  --dark: #e6e6ed;
+  --secondary: #e6e6ed;
+  --tertiary: rgba(230, 230, 237, 0.75);
 
   [saved-theme="dark"] & {
     --graph-bg: #e6e6ed;
+    --graph-hover: rgba(0, 92, 255, 0.15);
     --light: #005cff;
-    --lightgray: #b9c4e0;
+    --lightgray: rgba(0, 92, 255, 0.4);
     --gray: #005cff;
-    --darkgray: #24397a;
+    --darkgray: rgba(0, 92, 255, 0.7);
     --dark: #005cff;
-    --secondary: #24397a;
-    --tertiary: #4a63b8;
+    --secondary: #005cff;
+    --tertiary: rgba(0, 92, 255, 0.75);
   }
 
   & > h3 {
@@ -64,7 +67,7 @@
       transition: background-color 0.5s ease;
       cursor: pointer;
       &:hover {
-        background-color: rgba(255, 255, 255, 0.15);
+        background-color: var(--graph-hover);
       }
     }
   }
