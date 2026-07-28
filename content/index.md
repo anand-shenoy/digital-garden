@@ -1,5 +1,5 @@
 ---
-title: Digital Garden
+title: Anand's Digital Garden
 ---
 
 Ideas, design solutions, and things worth remembering, kept growing rather than finished.
