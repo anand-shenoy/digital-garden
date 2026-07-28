@@ -226,10 +226,20 @@ a {
       position: sticky;
     }
 
+    & .center {
+      @media all and ($desktop) {
+        grid-column: grid-header-start / grid-header-end;
+        grid-row: grid-header-start / grid-footer-end;
+      }
+    }
+
     & .sidebar.left {
       z-index: 1;
       grid-area: grid-sidebar-left;
       flex-direction: column;
+      @media all and ($desktop) {
+        padding-left: 3rem;
+      }
       @media all and ($mobile) {
         gap: 0;
         align-items: center;
@@ -246,6 +256,10 @@ a {
       grid-area: grid-sidebar-right;
       margin-right: 0;
       flex-direction: column;
+      @media all and ($desktop) {
+        padding: 0;
+        gap: 0;
+      }
       @media all and ($mobile) {
         margin-left: inherit;
         margin-right: inherit;

@@ -32,18 +32,12 @@
 }
 
 // Right sidebar (graph panel) sits above the carousel so scrolling images
-// visually pass behind it rather than in front
+// visually pass behind it rather than in front. Full-bleed padding/gap
+// removal for desktop lives in base.scss's .sidebar.right rule, where it
+// has enough specificity to actually override the shared .sidebar padding.
 .sidebar.right {
   position: sticky;
   z-index: 2;
-
-  // full-bleed: the blue/grey graph panel fills its two grid columns edge to
-  // edge with no top, bottom, or right margin
-  @media all and ($desktop) {
-    padding: 0;
-    gap: 0;
-    height: 100vh;
-  }
 }
 
 // readable horizontal gutter for the content column now that the page is
