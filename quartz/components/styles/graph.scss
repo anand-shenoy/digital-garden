@@ -1,16 +1,47 @@
 @use "../../styles/variables.scss" as *;
 
 .graph {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+
+  // panel-local colour overrides, reversed relative to the site's current mode
+  // (day: blue panel + white graph, night: grey panel + blue graph) — read by
+  // graph.inline.ts via getComputedStyle() on the local container, so these
+  // only affect this panel and never the site-wide theme variables
+  --graph-bg: #005cff;
+  --light: #ffffff;
+  --lightgray: #6e96ff;
+  --gray: #ffffff;
+  --darkgray: #b9d2ff;
+  --dark: #ffffff;
+  --secondary: #b9d2ff;
+  --tertiary: #e6eeff;
+
+  [saved-theme="dark"] & {
+    --graph-bg: #e6e6ed;
+    --light: #005cff;
+    --lightgray: #b9c4e0;
+    --gray: #005cff;
+    --darkgray: #24397a;
+    --dark: #005cff;
+    --secondary: #24397a;
+    --tertiary: #4a63b8;
+  }
+
   & > h3 {
     font-size: 1rem;
-    margin: 0;
+    margin: 0 0 0.5em 0;
+    color: var(--light);
   }
 
   & > .graph-outer {
     border-radius: 5px;
-    border: 1px solid var(--lightgray);
+    background-color: var(--graph-bg);
     box-sizing: border-box;
-    height: 250px;
+    flex: 1;
+    min-height: 0;
     margin: 0.5em 0;
     position: relative;
     overflow: hidden;
@@ -19,8 +50,8 @@
       cursor: pointer;
       background: none;
       border: none;
-      color: var(--dark);
-      opacity: 0.5;
+      color: var(--light);
+      opacity: 0.6;
       width: 24px;
       height: 24px;
       position: absolute;
@@ -33,7 +64,7 @@
       transition: background-color 0.5s ease;
       cursor: pointer;
       &:hover {
-        background-color: var(--lightgray);
+        background-color: rgba(255, 255, 255, 0.15);
       }
     }
   }

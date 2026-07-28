@@ -9,3 +9,30 @@
   font-style: normal;
   font-display: swap;
 }
+
+// Dark mode toggle moved to the top-right of the content column, per design mockup
+.center {
+  position: relative;
+}
+
+.center .darkmode {
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  z-index: 5;
+
+  & svg {
+    width: 28px;
+    height: 28px;
+    top: calc(50% - 14px);
+  }
+}
+
+// Right sidebar (graph panel) sits above the carousel so scrolling images
+// visually pass behind it rather than in front
+.sidebar.right {
+  position: sticky;
+  z-index: 2;
+}
