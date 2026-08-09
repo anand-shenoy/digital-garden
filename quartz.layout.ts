@@ -34,7 +34,7 @@ export const defaultContentPageLayout: PageLayout = {
         },
       ],
     }),
-    Component.Explorer(),
+    Component.CategoryMenu(),
   ],
   right: [Component.Graph()],
 }
@@ -54,7 +54,7 @@ export const defaultListPageLayout: PageLayout = {
         },
       ],
     }),
-    Component.Explorer(),
+    Component.CategoryMenu(),
   ],
   right: [Component.Graph()],
 }

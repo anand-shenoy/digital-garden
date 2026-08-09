@@ -248,28 +248,43 @@ a {
         display: flex;
         height: unset;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-between;
         padding: 0;
         padding-top: 2rem;
       }
 
-      // Title + explorer icon share the top row (explorer pushed to the
-      // far right via order in explorer.scss); the search row is forced
-      // onto its own full-width line below, with a divider under it.
-      // 2026-08-09.
+      // Title, search, and the explorer (menu) icon all share a single
+      // row now (2026-08-09, previously search was forced onto its own
+      // line below — reverted per feedback). Order: title, search,
+      // explorer (rightmost). A hand-drawn wavy divider runs underneath
+      // the whole row via background-image rather than a plain border.
       @media all and ($mobile) {
         & > .spacer.mobile-only {
           display: none;
         }
 
+        padding-bottom: 0.75rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8'%3E%3Cpath d='M0,4 Q3,0.5 6,4 T12,4 T18,4 T24,4' fill='none' stroke='%23005CFF' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: repeat-x;
+        background-position: bottom left;
+        background-size: 24px 8px;
+
         & > .flex-component {
           order: 2;
-          flex-basis: 100%;
-          margin-top: 0.5rem;
-          padding-bottom: 0.75rem;
-          border-bottom: 1px solid var(--lightgray);
-          justify-content: center;
+        }
+
+        & > .category-menu {
+          order: 3;
+        }
+      }
+
+      // Dark mode inverts the two-colour palette (light: #005CFF becomes
+      // the background tone, darkgray: #E6E6ED becomes the text/accent
+      // tone) — the wavy line's hardcoded SVG stroke colour above needs
+      // a matching override or it's invisible against the dark background.
+      :root[saved-theme="dark"] & {
+        @media all and ($mobile) {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8'%3E%3Cpath d='M0,4 Q3,0.5 6,4 T12,4 T18,4 T24,4' fill='none' stroke='%23E6E6ED' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
         }
       }
     }

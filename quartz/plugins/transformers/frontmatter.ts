@@ -23,6 +23,15 @@ function coalesceAliases(data: { [key: string]: any }, aliases: string[]) {
   }
 }
 
+// Fallback title from filename when no `title:` frontmatter is set.
+// Was previously the raw kebab-case file stem (e.g. "circulation-and-
+// hidden-space"); now sentence case with only the first word capitalised
+// (e.g. "Circulation and hidden space"). 2026-08-09.
+function sentenceCaseFromSlug(stem: string): string {
+  const words = stem.replace(/-/g, " ").toLowerCase()
+  return words.charAt(0).toUpperCase() + words.slice(1)
+}
+
 function coerceToArray(input: string | string[]): string[] | undefined {
   if (input === undefined || input === null) return undefined
 
@@ -74,7 +83,9 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
             if (data.title != null && data.title.toString() !== "") {
               data.title = data.title.toString()
             } else {
-              data.title = file.stem ?? i18n(cfg.configuration.locale).propertyDefaults.title
+              data.title = file.stem
+                ? sentenceCaseFromSlug(file.stem)
+                : i18n(cfg.configuration.locale).propertyDefaults.title
             }
 
             const tags = coerceToArray(coalesceAliases(data, ["tags", "tag"]))

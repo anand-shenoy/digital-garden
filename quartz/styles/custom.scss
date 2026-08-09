@@ -62,7 +62,7 @@
   margin-top: 40px;
 }
 
-.sidebar.left > .explorer {
+.sidebar.left > .category-menu {
   margin-top: 40px;
 }
 
@@ -82,5 +82,17 @@
   .center {
     padding: 0 3rem;
     box-sizing: border-box;
+  }
+}
+
+// Graph view removed on mobile for individual notes (data-slug set on
+// <body> by renderPage.tsx) — desktop is unaffected, and the homepage
+// keeps its graph on mobile too. 2026-08-09.
+// #quartz-body .sidebar sets display:flex with an ID selector, which
+// outranks a plain class selector regardless of source order — matched
+// here instead of relying on cascade order. 2026-08-09.
+@media all and ($mobile) {
+  body:not([data-slug="index"]) #quartz-body .sidebar.right {
+    display: none;
   }
 }
