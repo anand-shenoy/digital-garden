@@ -1,5 +1,5 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import { pathToRoot } from "../util/path"
+import { FullSlug, resolveRelative } from "../util/path"
 import { classNames } from "../util/lang"
 
 // Replaces the file/folder Explorer with a tag-derived category menu.
@@ -18,8 +18,6 @@ function toTitle(tag: string): string {
 }
 
 const CategoryMenu = ({ displayClass, fileData, allFiles }: QuartzComponentProps) => {
-  const baseDir = pathToRoot(fileData.slug!)
-
   const byTag = new Map<string, { slug: string; title: string }[]>()
   for (const file of allFiles) {
     if (file.slug === "index") continue
@@ -74,7 +72,7 @@ const CategoryMenu = ({ displayClass, fileData, allFiles }: QuartzComponentProps
             <ul>
               {items.map((item) => (
                 <li key={item.slug}>
-                  <a href={baseDir + item.slug}>{item.title}</a>
+                  <a href={resolveRelative(fileData.slug!, item.slug as FullSlug)}>{item.title}</a>
                 </li>
               ))}
             </ul>
@@ -87,7 +85,7 @@ const CategoryMenu = ({ displayClass, fileData, allFiles }: QuartzComponentProps
           <ul>
             {allItems.map((item) => (
               <li key={item.slug}>
-                <a href={baseDir + item.slug}>{item.title}</a>
+                <a href={resolveRelative(fileData.slug!, item.slug as FullSlug)}>{item.title}</a>
               </li>
             ))}
           </ul>
