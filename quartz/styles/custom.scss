@@ -31,6 +31,32 @@
   }
 }
 
+// On mobile, floats as a fixed bottom-right button instead of sitting in
+// the header row — 2026-08-09. Loaded after the rule above so it wins
+// despite matching specificity.
+@media all and ($mobile) {
+  .sidebar.left .darkmode {
+    position: fixed;
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+    width: 20px;
+    height: 20px;
+    padding: 0.6rem;
+    z-index: 50;
+    background-color: var(--light);
+    border-radius: 50%;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      top: calc(50% - 10px);
+      left: calc(50% - 10px);
+    }
+  }
+}
+
 // extra breathing room between the title, search, and nav tree
 .sidebar.left > .flex-component {
   margin-top: 40px;

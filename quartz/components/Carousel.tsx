@@ -4,9 +4,18 @@ import style from "./styles/carousel.scss"
 import script from "./scripts/carousel.inline"
 import { classNames } from "../util/lang"
 
-const PLACEHOLDER_COUNT = 6
+// Carousel only renders when the note's frontmatter lists real images:
+//   ---
+//   images: ["/path/to/image-1.jpg", "/path/to/image-2.jpg"]
+//   ---
+// Previously this always rendered 6 hardcoded "Image N" placeholders on
+// every page regardless of content (fixed 2026-08-09).
+const Carousel: QuartzComponent = ({ displayClass, fileData }: QuartzComponentProps) => {
+  const images = (fileData.frontmatter?.images as string[] | undefined) ?? []
+  if (images.length === 0) {
+    return null
+  }
 
-const Carousel: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
   return (
     <div class={classNames(displayClass, "carousel")}>
       <button class="carousel-arrow carousel-arrow-left" aria-label="Scroll images left">
@@ -16,9 +25,9 @@ const Carousel: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
       </button>
       <div class="carousel-viewport">
         <div class="carousel-track">
-          {Array.from({ length: PLACEHOLDER_COUNT }).map((_, i) => (
+          {images.map((src, i) => (
             <div class="carousel-slide" key={i}>
-              <span>Image {i + 1}</span>
+              <img src={src} alt="" loading="lazy" />
             </div>
           ))}
         </div>

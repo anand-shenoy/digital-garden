@@ -248,8 +248,29 @@ a {
         display: flex;
         height: unset;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         padding: 0;
         padding-top: 2rem;
+      }
+
+      // Title + explorer icon share the top row (explorer pushed to the
+      // far right via order in explorer.scss); the search row is forced
+      // onto its own full-width line below, with a divider under it.
+      // 2026-08-09.
+      @media all and ($mobile) {
+        & > .spacer.mobile-only {
+          display: none;
+        }
+
+        & > .flex-component {
+          order: 2;
+          flex-basis: 100%;
+          margin-top: 0.5rem;
+          padding-bottom: 0.75rem;
+          border-bottom: 1px solid var(--lightgray);
+          justify-content: center;
+        }
       }
     }
 
