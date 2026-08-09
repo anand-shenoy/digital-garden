@@ -57,13 +57,17 @@
   }
 }
 
-// extra breathing room between the title, search, and nav tree
-.sidebar.left > .flex-component {
-  margin-top: 40px;
-}
+// extra breathing room between the title, search, and nav tree — desktop
+// only, since title/search/menu share a single row on mobile and this
+// margin was pushing them out of vertical alignment there. 2026-08-09.
+@media all and ($desktop) {
+  .sidebar.left > .flex-component {
+    margin-top: 40px;
+  }
 
-.sidebar.left > .category-menu {
-  margin-top: 40px;
+  .sidebar.left > .category-menu {
+    margin-top: 40px;
+  }
 }
 
 // Right sidebar (graph panel) sits above the carousel so scrolling images

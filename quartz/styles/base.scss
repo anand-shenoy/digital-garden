@@ -264,10 +264,10 @@ a {
         }
 
         padding-bottom: 0.75rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8'%3E%3Cpath d='M0,4 Q3,0.5 6,4 T12,4 T18,4 T24,4' fill='none' stroke='%23005CFF' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='168' height='10' viewBox='0 0 168 10'%3E%3Cpath d='M0,5 Q7.6,2.4 13.9,3.2 Q20.1,3.8 29.7,4.3 Q33.7,2.8 41.1,4.7 Q47.0,4.6 55.9,6.7 Q64.5,6.6 72.5,7.3 Q83.9,4.1 92.3,2.6 Q97.7,4.1 104.6,3.0 Q111.5,3.7 117.3,5.4 Q123.5,2.9 133.2,2.7 Q141.0,4.0 150.3,4.6 Q159.0,5.1 165.4,4.0 Q166.8,6.2 168.0,5.4' fill='none' stroke='%23005CFF' stroke-width='1.3' stroke-linecap='round'/%3E%3C/svg%3E");
         background-repeat: repeat-x;
         background-position: bottom left;
-        background-size: 24px 8px;
+        background-size: 168px 10px;
 
         & > .flex-component {
           order: 2;
@@ -284,7 +284,7 @@ a {
       // a matching override or it's invisible against the dark background.
       :root[saved-theme="dark"] & {
         @media all and ($mobile) {
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8'%3E%3Cpath d='M0,4 Q3,0.5 6,4 T12,4 T18,4 T24,4' fill='none' stroke='%23E6E6ED' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='168' height='10' viewBox='0 0 168 10'%3E%3Cpath d='M0,5 Q10.7,2.9 17.6,3.9 Q23.6,5.1 32.3,6.3 Q39.1,6.4 43.7,5.9 Q53.9,5.3 62.6,4.0 Q72.0,6.2 78.8,4.8 Q84.7,6.1 94.0,5.9 Q103.7,5.8 110.9,7.6 Q116.2,6.6 125.3,5.9 Q129.8,5.5 137.9,3.0 Q143.5,4.8 150.0,3.7 Q156.1,5.7 161.7,4.7 Q164.0,5.5 168.0,6.9' fill='none' stroke='%23E6E6ED' stroke-width='1.3' stroke-linecap='round'/%3E%3C/svg%3E");
         }
       }
     }
