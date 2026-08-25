@@ -12,3 +12,4 @@ Visual techniques and styles used across marketing and presentation work, distin
 
 ## Where This Shows Up
 - [[sketch-to-render-hybrid-marketing]] — half hand-drawn sketch, half photoreal render, composited into one image
+- [[procedural-doodle-generation]] — doodles drawn entirely in code (Canvas 2D), no image model, positioned via a rough 3D model
