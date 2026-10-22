@@ -1,0 +1,303 @@
+[
+ {
+  "id": "p0",
+  "name": "Giggling Squid",
+  "kind": "food",
+  "x": 473.6,
+  "z": 117.5
+ },
+ {
+  "id": "p1",
+  "name": "Chelmsford Central Library",
+  "kind": "culture",
+  "x": 78.0,
+  "z": 140.4
+ },
+ {
+  "id": "p2",
+  "name": "Empire Palace",
+  "kind": "food",
+  "x": 856.8,
+  "z": 8.0
+ },
+ {
+  "id": "p3",
+  "name": "Nando's",
+  "kind": "food",
+  "x": 451.5,
+  "z": 318.9
+ },
+ {
+  "id": "p4",
+  "name": "Zizzi",
+  "kind": "food",
+  "x": 462.9,
+  "z": 330.5
+ },
+ {
+  "id": "p5",
+  "name": "Prezzo",
+  "kind": "food",
+  "x": 492.9,
+  "z": 102.7
+ },
+ {
+  "id": "p6",
+  "name": "PizzaExpress",
+  "kind": "food",
+  "x": 341.3,
+  "z": 510.7
+ },
+ {
+  "id": "p7",
+  "name": "Walkabout",
+  "kind": "food",
+  "x": 483.4,
+  "z": 292.8
+ },
+ {
+  "id": "p8",
+  "name": "Zenxi",
+  "kind": "food",
+  "x": 564.5,
+  "z": 670.2
+ },
+ {
+  "id": "p9",
+  "name": "The Bootmaker",
+  "kind": "food",
+  "x": 387.4,
+  "z": 485.6
+ },
+ {
+  "id": "p10",
+  "name": "Olio",
+  "kind": "food",
+  "x": 272.6,
+  "z": 434.4
+ },
+ {
+  "id": "p11",
+  "name": "Small Talk Tearooms",
+  "kind": "food",
+  "x": 521.0,
+  "z": 311.9
+ },
+ {
+  "id": "p12",
+  "name": "Chelmsford Mosque",
+  "kind": "landmark",
+  "x": 347.2,
+  "z": 550.6
+ },
+ {
+  "id": "p13",
+  "name": "Costa",
+  "kind": "food",
+  "x": 485.5,
+  "z": 372.8
+ },
+ {
+  "id": "p14",
+  "name": "Cake at the Lake",
+  "kind": "food",
+  "x": -329.7,
+  "z": 333.0
+ },
+ {
+  "id": "p15",
+  "name": "Garrison Tavern",
+  "kind": "food",
+  "x": 305.4,
+  "z": 138.2
+ },
+ {
+  "id": "p16",
+  "name": "Acanteen",
+  "kind": "food",
+  "x": 306.2,
+  "z": 419.2
+ },
+ {
+  "id": "p17",
+  "name": "The Breakfast Club",
+  "kind": "food",
+  "x": 336.6,
+  "z": 516.1
+ },
+ {
+  "id": "p18",
+  "name": "Be At One",
+  "kind": "food",
+  "x": 331.5,
+  "z": 522.1
+ },
+ {
+  "id": "p19",
+  "name": "Robins Pie & Mash",
+  "kind": "food",
+  "x": 392.0,
+  "z": 424.1
+ },
+ {
+  "id": "p20",
+  "name": "Recess",
+  "kind": "food",
+  "x": 364.3,
+  "z": 454.0
+ },
+ {
+  "id": "p21",
+  "name": "Kings Coffee House",
+  "kind": "food",
+  "x": 343.9,
+  "z": 531.7
+ },
+ {
+  "id": "p37",
+  "name": "Everyman",
+  "kind": "culture",
+  "x": 471.5,
+  "z": 181.8
+ },
+ {
+  "id": "p44",
+  "name": "Marconi New Street Factory",
+  "kind": "landmark",
+  "x": 322.1,
+  "z": -354.4
+ },
+ {
+  "id": "p63",
+  "name": "Bell Meadow",
+  "kind": "park",
+  "x": 159.9,
+  "z": 342.4
+ },
+ {
+  "id": "p65",
+  "name": "Chelmsford Cathedral",
+  "kind": "landmark",
+  "x": 223.4,
+  "z": 47.5
+ },
+ {
+  "id": "p66",
+  "name": "Frank Whitmore Green",
+  "kind": "park",
+  "x": -152.5,
+  "z": 127.2
+ },
+ {
+  "id": "p67",
+  "name": "Shire Hall",
+  "kind": "landmark",
+  "x": 274.1,
+  "z": 100.5
+ },
+ {
+  "id": "p68",
+  "name": "Odeon",
+  "kind": "culture",
+  "x": 442.0,
+  "z": 503.5
+ },
+ {
+  "id": "p70",
+  "name": "Peter Edwards Library & Museum",
+  "kind": "culture",
+  "x": -105.9,
+  "z": 401.3
+ },
+ {
+  "id": "p72",
+  "name": "Anne Knight Building",
+  "kind": "landmark",
+  "x": -17.0,
+  "z": -29.4
+ },
+ {
+  "id": "p73",
+  "name": "Chelmsford Central Baptist Church",
+  "kind": "landmark",
+  "x": -5.1,
+  "z": 41.4
+ },
+ {
+  "id": "p83",
+  "name": "Mill House",
+  "kind": "landmark",
+  "x": 307.5,
+  "z": -755.6
+ },
+ {
+  "id": "p87",
+  "name": "Sky Blue Pasture",
+  "kind": "park",
+  "x": 127.5,
+  "z": 371.5
+ },
+ {
+  "id": "p88",
+  "name": "West Park",
+  "kind": "park",
+  "x": -1225.1,
+  "z": -202.3
+ },
+ {
+  "id": "p89",
+  "name": "Civic Theatre",
+  "kind": "culture",
+  "x": -233.9,
+  "z": -91.2
+ },
+ {
+  "id": "p91",
+  "name": "Trinity Methodist",
+  "kind": "landmark",
+  "x": -365.2,
+  "z": -263.2
+ },
+ {
+  "id": "p110",
+  "name": "Cramphorn Studio",
+  "kind": "culture",
+  "x": -229.8,
+  "z": -72.7
+ },
+ {
+  "id": "p111",
+  "name": "Marconi Water Tower",
+  "kind": "landmark",
+  "x": 243.1,
+  "z": -370.6
+ },
+ {
+  "id": "p115",
+  "name": "Our Lady Immaculate",
+  "kind": "landmark",
+  "x": -102.2,
+  "z": 725.9
+ },
+ {
+  "id": "p117",
+  "name": "Central Park Memorial Gardens",
+  "kind": "park",
+  "x": -48.0,
+  "z": 212.5
+ },
+ {
+  "id": "p148",
+  "name": "Springfield Hall Park",
+  "kind": "park",
+  "x": 657.7,
+  "z": -1074.6
+ },
+ {
+  "id": "p165",
+  "name": "Admirals Park",
+  "kind": "park",
+  "x": -958.0,
+  "z": -348.7
+ }
+]

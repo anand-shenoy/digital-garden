@@ -1,0 +1,32 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Chelmsford in miniature</title>
+<style>
+:root{--bg:#f3f1ec;--panel:rgba(255,255,255,.86);--ink:#1d1d1b;--muted:#6b6a65;--line:rgba(0,0,0,.12);--accent:#c4602b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121411;--panel:rgba(22,24,21,.86);--ink:#ecebe6;--muted:#a3a29b;--line:rgba(255,255,255,.14);--accent:#e48a52}}
+:root[data-theme="dark"]{--bg:#121411;--panel:rgba(22,24,21,.86);--ink:#ecebe6;--muted:#a3a29b;--line:rgba(255,255,255,.14);--accent:#e48a52}
+*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+#stage{position:fixed;inset:0}#stage canvas{display:block;width:100%;height:100%;touch-action:none}
+.panel{position:fixed;background:var(--panel);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+#title{top:16px;left:16px;max-width:calc(100% - 32px)}#title h1{margin:0;font-size:16px;letter-spacing:.02em}#title p{margin:2px 0 0;color:var(--muted);font-size:12px}#title .credit{font-size:10px;opacity:.8}#title .credit a{color:inherit}
+#time{top:16px;right:16px;width:200px}#time label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}#time input{width:100%;accent-color:var(--accent)}
+#key{bottom:16px;left:16px;right:16px;margin:0 auto;width:fit-content;max-width:calc(100% - 32px);display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+#key button{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 10px;font:inherit;font-size:12px;cursor:pointer}
+#key button[aria-pressed="false"]{opacity:.45}
+#info{left:16px;bottom:76px;max-width:min(320px,calc(100% - 32px));display:none}#info h2{margin:0 0 4px;font-size:14px}.swatches{display:flex;flex-wrap:wrap;gap:4px 12px;margin:2px 0 6px;font-size:12px}.swatches i{display:inline-block;width:16px;height:4px;border-radius:2px;margin-right:5px;vertical-align:middle}#info p{margin:0;color:var(--muted);font-size:12px}#info a{color:var(--accent)}
+#boardWrap{position:fixed;top:92px;right:16px;display:none;z-index:2}#boardTab{display:none}
+#board{position:static;font-variant-numeric:tabular-nums;width:280px}#board h2{margin:0 0 6px;font-size:13px;display:flex;justify-content:space-between;gap:12px}#board h2 span:last-child{color:var(--muted);font-weight:400}
+#board table{border-collapse:collapse;width:100%;font-size:12px}#board td{padding:3px 4px;border-top:1px solid var(--line)}#board td:last-child{text-align:right;color:var(--accent)}
+@media (max-width:520px){#time{top:92px;left:16px;right:auto;width:180px}#key{gap:4px;padding:8px;flex-wrap:nowrap}#key button{padding:5px 8px;font-size:11px;white-space:nowrap}#info{bottom:72px}
+#boardWrap{right:0;top:170px;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}#boardWrap.open{transform:translateX(0)}
+#board{width:min(280px,calc(100vw - 52px));border-radius:12px 0 0 12px;border-right:0}
+#boardTab{display:block;position:absolute;left:-34px;top:14px;width:34px;padding:12px 0;writing-mode:vertical-rl;transform:rotate(180deg);background:var(--panel);backdrop-filter:blur(10px);color:var(--ink);border:1px solid var(--line);border-left:0;border-radius:0 10px 10px 0;font:600 12px system-ui,sans-serif;letter-spacing:.04em;cursor:pointer}}
+</style></head><body>
+<div id="stage" aria-label="Interactive miniature of central Chelmsford. Drag to orbit, scroll or pinch to zoom, tap for details."></div>
+<div class="panel" id="title"><h1>Chelmsford in miniature</h1><p>Drag to look around. Tap anything.</p><p class="credit">Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</p></div>
+<div class="panel" id="time"><label for="hour"><span>Time of day</span><output id="hourOut">18:30</output></label><input id="hour" type="range" min="0" max="23.75" step="0.25" value="12"></div>
+<div class="panel" id="key" role="group" aria-label="Show or hide layers"></div>
+<div class="panel" id="info" role="status"></div>
+<div id="boardWrap"><button id="boardTab" aria-expanded="false" aria-controls="board">Trains</button><div class="panel" id="board" aria-live="polite"></div></div>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module" src="js/main.js"></script>
+</body></html>

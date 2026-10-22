@@ -1,0 +1,145 @@
+{
+ "gathered": "2026-10-21",
+ "events": [
+  {
+   "id": "e1",
+   "name": "Cult Figure: Kenneth Williams",
+   "cat": "arts",
+   "when": "Thu 22 Oct, 19:30",
+   "place": "Chelmsford Theatre Studio",
+   "lon": 0.465663,
+   "lat": 51.736254,
+   "source": "https://www.chelmsfordtheatre.co.uk/events/cult-figure"
+  },
+  {
+   "id": "e2",
+   "name": "Lunchtime Concert",
+   "cat": "music",
+   "when": "Fri 23 Oct, 12:00 (free)",
+   "place": "Chelmsford Cathedral",
+   "lon": 0.472244,
+   "lat": 51.735173,
+   "source": "https://www.chelmsfordcathedral.org.uk/events/event/lunchtime-concert0300"
+  },
+  {
+   "id": "e3",
+   "name": "Of Mice and Men",
+   "cat": "arts",
+   "when": "Fri 23 Oct, 19:30",
+   "place": "Chelmsford Theatre Studio",
+   "lon": 0.465663,
+   "lat": 51.736254,
+   "source": "https://www.chelmsfordtheatre.co.uk/events/of-mice-and-men"
+  },
+  {
+   "id": "e4",
+   "name": "The Music of Fleetwood Mac by Candlelight",
+   "cat": "music",
+   "when": "Fri 23 Oct, 18:45 and 21:00",
+   "place": "Chelmsford Cathedral",
+   "lon": 0.472244,
+   "lat": 51.735173,
+   "source": "https://www.chelmsfordcathedral.org.uk/events/event/the-music-of-fleetwood-mac-by-candlelight"
+  },
+  {
+   "id": "e5",
+   "name": "High Street Market",
+   "cat": "food",
+   "when": "Tue, Fri and Sat; stall hours vary",
+   "place": "High Street",
+   "lon": 0.473806,
+   "lat": 51.733411,
+   "source": "https://www.chelmsford.gov.uk/leisure-theatres-and-museums/chelmsford-market/high-street-market/"
+  },
+  {
+   "id": "e6",
+   "name": "Autumnal Charm Bracelets, children's workshop",
+   "cat": "family",
+   "when": "Sat 24 Oct, 10:00",
+   "place": "Chelmsford Cathedral",
+   "lon": 0.472244,
+   "lat": 51.735173,
+   "source": "https://www.chelmsfordcathedral.org.uk/events/event/autumnal-charm-bracelets-childrens-workshop"
+  },
+  {
+   "id": "e7",
+   "name": "Ode to Joyce",
+   "cat": "arts",
+   "when": "Sat 24 Oct, 14:30",
+   "place": "Chelmsford Theatre Studio",
+   "lon": 0.465663,
+   "lat": 51.736254,
+   "source": "https://www.chelmsfordtheatre.co.uk/events/ode-to-joyce-2026"
+  },
+  {
+   "id": "e8",
+   "name": "Joe Wells: Daddy Autism",
+   "cat": "arts",
+   "when": "Sat 24 Oct, 19:30",
+   "place": "Chelmsford Theatre Studio",
+   "lon": 0.465663,
+   "lat": 51.736254,
+   "source": "https://www.chelmsfordtheatre.co.uk/events/joe-wells-daddy-autism"
+  },
+  {
+   "id": "e9",
+   "name": "A Night at the Opera",
+   "cat": "music",
+   "when": "Sat 24 Oct, 19:30",
+   "place": "Chelmsford Cathedral",
+   "lon": 0.472244,
+   "lat": 51.735173,
+   "source": "https://www.chelmsfordcathedral.org.uk/events/event/a-night-at-the-opera"
+  },
+  {
+   "id": "e10",
+   "name": "Alice in Wonderland (ballet)",
+   "cat": "family",
+   "when": "Sun 25 Oct, 13:00 and 15:00",
+   "place": "Chelmsford Theatre Studio",
+   "lon": 0.465663,
+   "lat": 51.736254,
+   "source": "https://www.chelmsfordtheatre.co.uk/events/alice-in-wonderland"
+  },
+  {
+   "id": "e11",
+   "name": "Eric & Ern",
+   "cat": "arts",
+   "when": "Mon 26 Oct, 19:30",
+   "place": "Chelmsford Theatre",
+   "lon": 0.465603,
+   "lat": 51.73642,
+   "source": "https://www.chelmsfordtheatre.co.uk/events/eric-ern-2026"
+  },
+  {
+   "id": "e12",
+   "name": "That Knave, Raleigh",
+   "cat": "arts",
+   "when": "Mon 26 Oct, 19:30",
+   "place": "Chelmsford Theatre Studio",
+   "lon": 0.465663,
+   "lat": 51.736254,
+   "source": "https://www.chelmsfordtheatre.co.uk/events/that-knave-raleigh"
+  },
+  {
+   "id": "e13",
+   "name": "An Evening with David Olusoga (Science Festival)",
+   "cat": "arts",
+   "when": "Tue 27 Oct, 19:45",
+   "place": "Chelmsford Cathedral",
+   "lon": 0.472244,
+   "lat": 51.735173,
+   "source": "https://www.chelmsfordcathedral.org.uk/events/event/aru-science-festival-an-evening-with-david-olusoga"
+  },
+  {
+   "id": "e14",
+   "name": "Voices of Valjean",
+   "cat": "music",
+   "when": "Wed 28 Oct, 19:30",
+   "place": "Chelmsford Cathedral",
+   "lon": 0.472244,
+   "lat": 51.735173,
+   "source": "https://www.chelmsfordcathedral.org.uk/events/event/voices-of-valjean"
+  }
+ ]
+}
