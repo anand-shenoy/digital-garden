@@ -49,7 +49,7 @@ I call mine dream walks. I dictate an idea while walking, then read it back in t
 
 | Story | Product | Published |
 |---|---|---|
-| [The Last Inbox](https://anandshenoy.me/anacad_article/the-last-inbox/) | Threadline, one shared record per project instead of an inbox | 6 November 2026 |
+| [The Last Inbox](https://anandshenoy.me/anacad_article/the-last-inbox/) | Threadling, one shared record per project instead of an inbox | 6 November 2026 |
 | [Number Seven, Warmer](https://anandshenoy.me/anacad_article/number-seven-warmer/) | Warmer, numbered render markups from a phone | 8 November 2026 |
 | [The Picture That Remembered](https://anandshenoy.me/anacad_article/the-picture-that-remembered/) | Trimages, images that carry their own data from mood board to schedule | 8 November 2026 |
 
