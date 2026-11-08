@@ -58,4 +58,3 @@ Architects already do this for clients. A render is a design fiction for a build
 
 ## Related
 - [[strategy/verdict-forge-graft]]
-- [[strategy/three-types-of-innovation-christensen]]
